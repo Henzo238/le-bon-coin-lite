@@ -32,7 +32,7 @@ const handleSubmit = async () => {
         username: data.user.username,
         token: data.jwt,
       }
-      // Stockage du 'token' et du nom de l'utilisateur dans le fournisseur de dépendance global
+
       GlobalStore.changeUserInfos({
         username: data.user.username,
         token: data.jwt,
@@ -40,7 +40,6 @@ const handleSubmit = async () => {
 
       $cookies.set('userInfos', userInfos)
 
-      // Navigation vers la page d'accueil
       router.push({ name: 'home' })
     } else {
       errorMessage.value = 'Veuillez remplir tous les champs'
@@ -79,7 +78,6 @@ const handleSubmit = async () => {
               v-model="username"
               @input="() => (errorMessage = '')"
             />
-            <!-- 👆 Bonus 2 - Fonction déclenchée à chaque modification du champ de saisie pour vider le message d'erreur -->
           </div>
 
           <div>
@@ -91,13 +89,11 @@ const handleSubmit = async () => {
               v-model="email"
               @input="() => (errorMessage = '')"
             />
-            <!-- 👆 Bonus 2 - Fonction déclenchée à chaque modification du champ de saisie pour vider le message d'erreur -->
           </div>
 
           <div>
             <label for="password">Mot de passe <span>*</span></label>
             <div class="passwordInput">
-              <!-- 👇 Bonus 1 - Changement du type de l'input selon la valeur de le 'ref' pour rendre visible ou non les caractères entrés dans le champ -->
               <input
                 :type="displayPassword ? 'text' : 'password'"
                 name="password"
@@ -105,9 +101,6 @@ const handleSubmit = async () => {
                 v-model="password"
                 @input="() => (errorMessage = '')"
               />
-              <!-- 👆 Bonus 2 - Fonction déclenchée à chaque modification du champ de saisie pour vider le message d'erreur -->
-
-              <!-- Bonus 1 - affichage conditionnel de l'icône -->
               <div>
                 <font-awesome-icon
                   :icon="['far', 'eye']"
@@ -150,7 +143,6 @@ const handleSubmit = async () => {
   background-size: contain;
   background-position: bottom;
   display: flex;
-  /* Le mot clé 'safe' permet à cette propriété de repasser automatiquement ) la valeur 'flex-start' si la hauteur devient insuffisante. Cela évitera à l'utilisateur de ne pas pouvoir scroller pour voir le haut et le bas du bloc.  */
   align-items: safe center;
   justify-content: center;
 }
@@ -203,7 +195,7 @@ input {
   display: flex;
   align-items: center;
   color: var(--grey);
-  height: 100%;
+  height: 55%;
   border-radius: 0 15px 15px 0;
   width: 40px;
   padding: 10px;

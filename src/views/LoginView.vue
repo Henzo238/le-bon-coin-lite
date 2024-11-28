@@ -71,13 +71,11 @@ const handleSubmit = async () => {
               v-model="email"
               @input="() => (errorMessage = '')"
             />
-            <!-- 👆 Bonus 2 - Fonction déclenchée à chaque modification du champ de saisie pour vider le message d'erreur -->
           </div>
 
           <div>
             <label for="password">Mot de passe <span>*</span></label>
             <div class="passwordInput">
-              <!-- 👇 Bonus 1 - Changement du type de l'input selon la valeur de le 'ref' pour rendre visible ou non les caractères entrés dans le champ -->
               <input
                 :type="displayPassword ? 'text' : 'password'"
                 name="password"
@@ -85,9 +83,7 @@ const handleSubmit = async () => {
                 v-model="password"
                 @input="() => (errorMessage = '')"
               />
-              <!-- 👆 Bonus 2 - Fonction déclenchée à chaque modification du champ de saisie pour vider le message d'erreur -->
 
-              <!-- Bonus 1 - affichage conditionnel de l'icône -->
               <div>
                 <font-awesome-icon
                   :icon="['far', 'eye']"
@@ -183,7 +179,7 @@ input {
   align-items: center;
   border-left: none;
   color: var(--grey);
-  height: 45px;
+  height: 27px;
   border-radius: 0 15px 15px 0;
   width: 40px;
   padding: 10px;
