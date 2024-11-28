@@ -95,4 +95,31 @@ onMounted(async () => {
   flex-wrap: wrap;
   gap: 40px 15px;
 }
+@media (max-width: 1050px) {
+  .topLine {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 880px) {
+  .topLine {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .topLine {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    padding-top: 40px;
+  }
+  .offersBloc {
+    justify-content: center;
+  }
+}
 </style>
