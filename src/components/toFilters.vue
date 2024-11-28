@@ -173,4 +173,56 @@ button {
   font-weight: bold;
   font-size: 14px;
 }
+@media (max-width: 1050px) {
+  form {
+    justify-content: space-around;
+    margin-bottom: 90px;
+  }
+  form > div {
+    gap: 50px;
+    flex-direction: column;
+  }
+  button {
+    font-size: 16px;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricePart,
+  .sortPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  form {
+    margin-bottom: 50px;
+  }
+  .pricePart input {
+    height: 35px;
+    width: 100px;
+    border-radius: 12px 0 0 12px;
+  }
+  .pricePart label {
+    height: 35px;
+    width: 30px;
+    border-radius: 0 12px 12px 0;
+  }
+  .pricePart input::placeholder {
+    font-size: 13px;
+  }
+  .displayIconSmall {
+    display: inline;
+  }
+  .hideSmall {
+    display: none;
+  }
+}
 </style>
